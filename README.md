@@ -1,4 +1,5 @@
 # Building RAG System That Answers about AI/ML and CSE related 
+its a RAG system built on AI/ML and Computer Science related books and concepts to query and learn it more efficiently.
 <!-- Initialize UV package -->
 ``` uv init
 uv venv ```
