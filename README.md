@@ -59,3 +59,40 @@ Why chunking?
 2. Smaller chunks = more precise retrieval
 3. Better similarity matching in vector search
 """
+
+<!-- Store the Chunked Texts into Vector DB -->
+Now that we've chunked the texts from the loaded documents (PDFs), now we need to store them into an embedding system which is later used to match the user queries (semantic search) with the vectors using similar chunks.  
+
+#### What is Embedding?  
+A list of numbers (vector) that represents the meaning of text  
+Similar meanings → similar numbers  
+```
+"neural network" → [0.2, 0.8, 0.1, 0.5, ...]  (384 numbers)
+"deep learning"  → [0.3, 0.7, 0.2, 0.4, ...]  (similar!)
+"pizza recipe"   → [0.9, 0.1, 0.8, 0.2, ...]  (very different!)
+```
+<!-- What we use -->
+Transformers → sentence-transformer (Model → all-MiniLM-L6-v2)  
+ChromaDB → Vector Database  
+
+#### How do we find similar chunks?
+
+Cosine similarity: Measures angle between vectors
+Smaller angle = more similar meaning
+
+```
+create_vectordb.py
+
+Purpose: Convert text chunks into embeddings and store them in ChromaDB.
+
+Input: data/chunked_data.jsonl (from chunk_text.py)
+Output: data/chroma_db/ (ChromaDB persistent storage)
+
+Embedding Model: all-MiniLM-L6-v2 (384 dimensions, local)
+Vector DB: ChromaDB (local, persistent)
+
+What are embeddings?
+- Mathematical representations of text meaning
+- Similar text = similar vectors
+- Enables semantic search (meaning-based, not keyword-based)
+```
