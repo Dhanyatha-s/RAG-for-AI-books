@@ -36,3 +36,26 @@ uv add pypdf2 langchain langchain-community chromadb sentence-transformers googl
 
 - extract text from  it
 
+- Save it into a new folder as json file that contains the extracted text with "FileName", "PageNumber", "Text"
+
+<!-- Chunk the Text  -->
+# Now Chunk the text we have extracted from the data folder.
+
+"""
+chunk_text.py
+
+Purpose: Load extracted PDF pages and chunk them into smaller pieces for RAG.
+
+Input: data/extracted_pages.json (from load_pdfs.py)
+Output: data/chunked_data.json
+
+Chunking Strategy:
+- Chunk size: 800 characters (optimal for retrieval)
+- Overlap: 200 characters (preserves context at boundaries)
+- Uses RecursiveCharacterTextSplitter (splits at natural boundaries)
+
+Why chunking?
+1. LLMs have token limits - can't process entire books
+2. Smaller chunks = more precise retrieval
+3. Better similarity matching in vector search
+"""
