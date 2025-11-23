@@ -136,11 +136,12 @@ How it works:
 5. Get intelligent answer with citations
 ```
 ### here is the result of the Rag system built
+UI is built with **Gradio**
 
 ![alt text](image.png)
 
 # what i have learnt from this is
-What You've Learned (HUGE!)
+
 
 ✅ PDF Processing - Handling real-world PDFs with errors
 ✅ Text Chunking - Strategic splitting for RAG
@@ -149,3 +150,4 @@ What You've Learned (HUGE!)
 ✅ LLM Integration - Prompt engineering for RAG
 ✅ Error Handling - Dealing with encoding issues, surrogates, etc.
 ✅ Software Engineering - Modular code, separate concerns
+
