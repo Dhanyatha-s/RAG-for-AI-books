@@ -123,6 +123,7 @@ Return raw text snippets
 
 <!-- Now Its time to introduce brain to it -->
 ## Akal lana zaruri hai..............
+
 ```
 query_system.py
 
@@ -134,7 +135,7 @@ How it works:
 3. Search ChromaDB for similar chunks
 4. Send chunks + question to Gorg
 5. Get intelligent answer with citations
-```
+
 ### here is the result of the Rag system built
 UI is built with **Gradio**
 
