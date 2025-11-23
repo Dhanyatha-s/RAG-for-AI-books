@@ -110,3 +110,42 @@ What are embeddings?
 - connect it with i/p data
 
 - test the connection and embedding
+
+#### This gives the similar chunks and context which has smaller cosin value (means - similar) to the question/query asked which is raw.
+
+Query → embedding
+Find similar chunks
+Return raw text snippets
+
+❓ Question: "What is machine learning?"
+🔍 Search: Finds relevant chunks
+📄 Returns: Raw snippets
+
+<!-- Now Its time to introduce brain to it -->
+## Akal lana zaruri hai..............
+```
+query_system.py
+
+Purpose: Query the RAG system and get intelligent answers with citations.
+
+How it works:
+1. Take user question
+2. Convert to embedding
+3. Search ChromaDB for similar chunks
+4. Send chunks + question to Gorg
+5. Get intelligent answer with citations
+```
+### here is the result of the Rag system built
+
+![alt text](image.png)
+
+# what i have learnt from this is
+What You've Learned (HUGE!)
+
+✅ PDF Processing - Handling real-world PDFs with errors
+✅ Text Chunking - Strategic splitting for RAG
+✅ Embeddings - Converting text to semantic vectors
+✅ Vector Databases - ChromaDB for similarity search
+✅ LLM Integration - Prompt engineering for RAG
+✅ Error Handling - Dealing with encoding issues, surrogates, etc.
+✅ Software Engineering - Modular code, separate concerns
