@@ -22,10 +22,12 @@ print(f"Loading the input file {INPUT_FILE}")
 
 try:
 
-    with open(INPUT_FILE, "r", encoding='utf-8') as f:
-        all_books = json.load(f)
+    data = []
+    with open("data/extracted_pages.json", "r", encoding="utf-8") as f:
+        for line in f:
+            data.append(json.loads(line))
 
-        print(f"✅ Loaded {len(all_books)} pages")
+        print(f"✅ Loaded {len(data)} pages")
 except Exception as e:
     print(f"❌ Error loading file: {str(e)}")
     exit(1)
@@ -46,7 +48,7 @@ chunked_data = []
 total_chars_before = 0
 total_chars_after = 0
 
-for idx, page_data in enumerate(all_books):
+for idx, page_data in enumerate(data):
     # track chars counts
     total_chars_before += len(page_data["text"])
 
@@ -69,6 +71,14 @@ for idx, page_data in enumerate(all_books):
 
     # Print progress every 100 pages
     if (idx + 1) % 100 == 0:
-        print(f"   Progress: {idx + 1}/{len(all_books)} pages chunked...")
+        print(f"   Progress: {idx + 1}/{len(data)} pages chunked...")
 
 print(f"\n✅ Chunking complete!")
+
+# Save chunked data
+print(f"\n💾 Saving chunked data to {OUTPUT_FILE}")
+
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(chunked_data, f, ensure_ascii=False, indent=2)
+
+print(f"✅ Saved {len(chunked_data)} chunks!")

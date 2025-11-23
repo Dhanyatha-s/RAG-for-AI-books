@@ -85,7 +85,7 @@ create_vectordb.py
 
 Purpose: Convert text chunks into embeddings and store them in ChromaDB.
 
-Input: data/chunked_data.jsonl (from chunk_text.py)
+Input: data/chunked_data.json (from chunk_text.py)
 Output: data/chroma_db/ (ChromaDB persistent storage)
 
 Embedding Model: all-MiniLM-L6-v2 (384 dimensions, local)
@@ -96,3 +96,17 @@ What are embeddings?
 - Similar text = similar vectors
 - Enables semantic search (meaning-based, not keyword-based)
 ```
+
+<!-- Process -->
+- Get the I/p and o/p path
+- Initialize the Batch_size (in 100 terms)
+- open it and read i/p files then store it into a new variables
+
+- initialize the embedding 
+- use sentence-transformer model and use embedding function 
+
+- Create ChromaDB connection
+<!-- generate embedding and connect to DB -->
+- connect it with i/p data
+
+- test the connection and embedding
