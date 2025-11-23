@@ -144,11 +144,12 @@ UI is built with **Gradio**
 # what i have learnt from this is
 
 
-✅ PDF Processing - Handling real-world PDFs with errors
-✅ Text Chunking - Strategic splitting for RAG
-✅ Embeddings - Converting text to semantic vectors
-✅ Vector Databases - ChromaDB for similarity search
-✅ LLM Integration - Prompt engineering for RAG
-✅ Error Handling - Dealing with encoding issues, surrogates, etc.
-✅ Software Engineering - Modular code, separate concerns
+
+✅ PDF Processing - Handling real-world PDFs with errors  
+✅ Text Chunking - Strategic splitting for RAG   
+✅ Embeddings - Converting text to semantic vectors  
+✅ Vector Databases - ChromaDB for similarity search  
+✅ LLM Integration - Prompt engineering for RAG  
+✅ Error Handling - Dealing with encoding issues, surrogates, etc.  
+✅ Software Engineering - Modular code, separate concerns  
 
