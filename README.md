@@ -1,5 +1,6 @@
-# Building RAG System That Answers about AI/ML and CSE related 
+# Building RAG System That Answers from the AI/ML and CSE related Books.
 its a RAG system built on AI/ML and Computer Science related books and concepts to query and learn it more efficiently.
+[link()](https://www.linkedin.com/posts/dhanyatha-s_ai-machinelearning-buildinpublic-activity-7398751760049168384-ddRI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEdw9aUB2VrRg36cLzWiF2EDQI5NJUnomx4)
 <!-- Initialize UV package -->
 ``` uv init
 uv venv ```
